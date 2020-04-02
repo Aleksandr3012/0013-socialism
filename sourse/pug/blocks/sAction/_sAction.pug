@@ -2,22 +2,23 @@ mixin sAction()
 	// start sAction
 	+b.sAction#sAction&attributes(attributes)
 		.container
-			+e.colAction
-				+e.A.item.program(href="#")
-					+icon('basic-todo')
-					.h4 Программа
-			+e.colAction
-				+e.A.item.event(href="#")
-					+icon('calendar')
-					.h4 Мероприятия
-			+e.colAction
-				+e.A.item.video(href="#")
-					+icon('megaphone')
-					.h4 Видео
-			+e.colAction
-				+e.A.item.donate(href="#")
-					+icon('basic-case')
-					.h4 Вступить!
+			+e.wrapper
+				+e.colAction
+					+e.A.item.program(href="#")
+						+icon('basic-todo')
+						.h4 Программа
+				+e.colAction
+					+e.A.item.event(href="#")
+						+icon('calendar')
+						.h4 Мероприятия
+				+e.colAction
+					+e.A.item.video(href="#")
+						+icon('megaphone')
+						.h4 Видео
+				+e.colAction
+					+e.A.item.donate(href="#")
+						+icon('basic-case')
+						.h4 Вступить!
 
 mixin sActionSecond()
 	// start sAction

@@ -56,7 +56,7 @@
 
 	&__col {
 		align-self: flex-end;
-		@include media-breakpoint-down(xl){
+		@include media-breakpoint-up(xl){
 			align-self: center;
 		}
 	}
