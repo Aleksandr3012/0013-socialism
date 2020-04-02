@@ -1,0 +1,89 @@
+// start .sSocial
+.sSocial {
+	padding: rem(220) 0 rem(90);
+
+	.icon {
+		font-size: rem(20);
+		margin-right: rem(10);
+	}
+
+	li {
+		list-style: none;
+		flex-shrink: 0;
+		display: block;
+		padding: 4px 2px 0;
+		a {
+			display: block;
+			color: #fff;
+			font-size: rem(15);
+			padding: rem(25px) rem(40px);
+			border-radius: 3px;
+			text-decoration: none;
+		}
+	}
+
+	ul {
+		display: flex;
+		justify-content: center;
+		flex-wrap: wrap;
+	}
+
+	&__fb {
+		background: #3b5998;
+	}
+
+	&__vk {
+		background: #4a76a8;
+	}
+
+	&__inst {
+		background: #c837ac;
+	}
+
+	&__youtube {
+		background: #ff0000;
+	}
+
+	&__ok {
+		background: #ee8208;
+	}
+
+	@include media-breakpoint-up(xl) {
+	}
+	@include media-breakpoint-up(lg) {
+	}
+	@include media-breakpoint-up(md) {
+	}
+	@include media-breakpoint-up(sm) {
+	}
+	@include media-breakpoint-up(xs) {
+	}
+
+	//
+	@include media-breakpoint-between(md, xl) {
+	}
+
+	//
+	@include media-breakpoint-only(xs) {
+	}
+	@include media-breakpoint-only(sm) {
+	}
+	@include media-breakpoint-only(md) {
+	}
+	@include media-breakpoint-only(lg) {
+	}
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+	@include media-breakpoint-down(lg) {
+	}
+	@include media-breakpoint-down(md) {
+	}
+	@include media-breakpoint-down(sm) {
+	}
+	@include media-breakpoint-down(xs) {
+	}
+} // end.sSocial

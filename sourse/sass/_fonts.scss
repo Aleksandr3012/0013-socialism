@@ -1,13 +1,20 @@
 
-$default-font: "roboto";
+$default-font: "Open Sans";
+$default-font2: Cormorantsc;
 // $file-form: ($file-formats: woff2 woff ttf);
 $addr: '../fonts/';
-$file-format: woff2 woff ttf;
+$file-format: woff2 woff;
 
-@include font-face ($default-font, $addr + "Roboto-Regular/Roboto-Regular", $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Roboto-Bold/Roboto-Bold", bold, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Roboto-Medium/Roboto-Medium", 500, $file-formats: $file-format);
-@include font-face ($default-font, $addr + "Roboto-Black/Roboto-Black", 900, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "opensans/opensans", 400, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "opensanslight/opensanslight", 300, $file-formats: $file-format);
+// @include font-face ($default-font, $addr + "OpenSansSemiBold/OpenSansSemiBold", 600, $file-formats: $file-format);
+// @include font-face ($default-font, $addr + "OpenSansRegularItalic/OpenSansRegularItalic", italic, $file-formats: $file-format);
+
+@include font-face ($default-font2, $addr + "cormorantsc/Cormorantsc", 400, $file-formats: $file-format);
+@include font-face ($default-font2, $addr + "Cormorantsclight/Cormorantsclight", 300, $file-formats: $file-format);
+@include font-face ($default-font2, $addr + "Cormorantscbook/Cormorantscbook", 500, $file-formats: $file-format);
+@include font-face ($default-font2, $addr + "Cormorantscbold/Cormorantscbold", Bold, $file-formats: $file-format);
+@include font-face ($default-font2, $addr + "Cormorantscsemibold/Cormorantscsemibold", 600, $file-formats: $file-format);
 
 // font-weight helper:
 

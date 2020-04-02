@@ -1,4 +1,29 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		.container
-			h2 footer
+			.row
+				.col-lg-4
+					+e.transition БЫСТРЫЙ ПЕРЕХОД
+					+e.UL.map
+						li: a(href="#") Главная
+						li: a(href="#") О движении
+						li: a(href="#") Краткая программа
+						li: a(href="#") Лидер движения
+						li: a(href="#") Новости
+						li: a(href="#") Календарь мероприятий
+						li: a(href="#") Видео
+						li: a(href="#") Контакты
+				.col-md-6.col-lg-4
+					+e.A.logo(href="#")
+						img(src="img/@2x/logo2.png", alt="logo")
+					+e.copyright Все права на&nbsp;материалы, находящиеся на&nbsp;сайте, охраняются в&nbsp;соответствии с&nbsp;законодательством РФ. При любом использовании материалов сайта письменное согласие обязательно
+				.col-md-6.col-lg-4
+					+e.A.btn.btn.btn-style-6.btn-big(href="#") Вступить в движение в Москве
+					+e.contacts
+						p Контакты оргкомитета
+						p г. Москва, Дмитровское шоссе, д. 9, стр. 2, этаж 4, каб. 456
+						p Станция метро «Тимирязевская»
+						p вторник, четверг с 16:00 до 19:00
+						p Запись на приём: 
+							a(href="tel:+79263247595") +7 926 324 75 95
+						+e.A.details(href="#") подробнее

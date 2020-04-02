@@ -102,47 +102,91 @@ mixin soc()
 			+icon('vk')
 //- /scial buttons
 //- WP menu
-mixin mnu()
-	-
-		var nav= { 
-			"Наши работы":"#",
-			"Цены":"#",
-			"Калькулятор":"#",
-			"Акции":"#" ,
-			"Заказать":"#",
-			}
-	ul.menu(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		li.menu-item.menu-item-has-children
-			a(href="#" itemprop="url") О нас
-			ul.sub-menu
-				-
-					var subnav= { 
-						"Строительство загородных домов":"#",
-						"Отделка загородных домов":"#",
-						"Покраска деревянных домов":"#",
-						"Штукатурные фасады загородных домов":"#" ,
-						}
-				each sublinkPatch, sublinkName in nav
-					li.menu-item(itemprop="item" ): a(href= sublinkPatch itemprop="url")= sublinkName
-		each linkPatch, linkName in nav
-			li.menu-item(itemprop="item" ): a(href= linkPatch itemprop="url")= linkName
+
+mixin menu()
+	+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+		+e.LI.item.active( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Главная
+		+e.LI.item.dropdown( itemprop="item" ): +e.A.link(href="#"  itemprop="url") О движении
+			+b.UL.drop
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Лидер движения
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Краткая политическая программа(турборедукторы)
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") О российской экономике
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Об идеологии в России
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Отчет
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Агитматериалы
+				+e.LI.item
+					+e.A.link(href="#" itemprop="url") Региональные отделения
+		+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Стать депутатом
+		+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Новости
+		+e.LI.item.dropdown( itemprop="item" ): +e.link(href="#"  itemprop="url") Видео
+			+b.UL.drop
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Анонс
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Важное
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча  в Хабаровске
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча в Воронеже
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча в Екатеринбурге
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча в Казани
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча в Комсомольске-на-Амуре
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча в Костроме
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча в Крыму
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча в Миассе
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча в Смоленске
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча в Сталинграде / Волгограде
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча в Тамбове
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча в Челябинске
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча с жителями Калинина / Твери
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча с жителями Краснодара
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Встреча с жителями Нижнего Тагила
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Выражаем поддержку
+				+e.LI.item: +e.A.link(href="#" itemprop="url") ГлавТема Народ
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Годовщина Движения
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Известные люди
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Информационное агентство «АВРОРА»
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Итоги недели на радио "Комсомольская Правда" 
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Канал "Pravda"
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Канал "Независимая Студия"
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Канал Красная Линия
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Митинги
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Молодёжное движение
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Парк "Тайган"
+				+e.LI.item: +e.A.link(href="#" itemprop="url") ПОЛИТИНФОРМ
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Прямая трансляция. Стрим
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Региональные отделения движения
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Съезд Движения 07.11.2019
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Федеральное ТВ
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Цитаты
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Школа Политпросвета
+
+		+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Фото
+		+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") мероприятия
+		+e.LI.item.dropdown( itemprop="item" ): +e.link(href="#"  itemprop="url") Контакты
+			+b.UL.drop
+				+e.LI.item: +e.A.link(href="#" itemprop="url") кураторы
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Контакты оргкомитета
+
 
 //- menu
-mixin mnu()
-	-
-		var nav= {
-			"Главная":"/",
-			"Услуги  ":"#",
-			"Подбор септика   ":"#",
-			"Акции ":"#"," О компании  ":"#",
-			" Доставка и оплата ":"#",
-			" Клиентам  ":"#",
-			" Наши работы   ":"#",
-			"Контакты ":"#"
-			}
-	+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
-		each linkPatch, linkName in nav
-			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
+//- mixin mnu()
+//- 	-
+//- 		var nav= {
+//- 			"Главная":"/",
+//- 			"Услуги  ":"#",
+//- 			"Подбор септика   ":"#",
+//- 			"Акции ":"#"," О компании  ":"#",
+//- 			" Доставка и оплата ":"#",
+//- 			" Клиентам  ":"#",
+//- 			" Наши работы   ":"#",
+//- 			"Контакты ":"#"
+//- 			}
+//- 	+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+//- 		each linkPatch, linkName in nav
+//- 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
 //- /menu
 
 

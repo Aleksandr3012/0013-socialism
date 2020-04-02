@@ -1,0 +1,98 @@
+.btn {
+	padding: rem(10px) rem(30px);
+	display: inline-block;
+	font-size: rem(14px);
+	text-transform: uppercase;
+	border-radius: rem(3px);
+	background: #eee;
+	color: #333;
+	text-align: center;
+	line-height: rem(24px);
+	letter-spacing: rem(0.8px);
+	box-shadow: 0px rem(12px) rem(25px) 0px rgba(187, 187, 187, 0.43);
+	@include mt;
+	&:hover {
+		background: #fff;
+		color: inherit;
+	}
+}
+
+.btn-small{
+	padding: rem(5px) rem(30px);
+	font-size: rem(13px);
+}
+
+.btn-big{
+	padding: rem(13px) rem(30px);
+	font-size: rem(16px);
+	letter-spacing: rem(1.2px);
+}
+
+.btn-style-2 {
+	background: #fff;
+	color: #14468c;
+	@include mt;
+	&:hover {
+		background: #14468c;
+		color: #fff;
+		box-shadow: 0px rem(12px) rem(25px) 0px rgba(20, 70, 140, 0.43);
+	}
+}
+
+.btn-style-3 {
+	background: #14468c;
+	color: #fff !important;
+	box-shadow: 0px rem(12px) rem(25px) 0px rgba(20, 70, 140, 0.43);
+	@include mt;
+
+	.icon {
+		font-size: rem(20);
+		margin-right: 3px;
+	}
+
+	&:hover {
+		background: #bf0d3e;
+		box-shadow: 0px rem(12px) rem(25px) 0px rgba(191, 13, 61, 0.43);
+	}
+}
+
+.btn-style-4 {
+	background: #0d2f5d;
+	color: #fff !important;
+	box-shadow: 0px rem(12px) rem(25px) 0px rgba(13, 47, 93, 0.43);
+	@include mt;
+
+	&:hover {
+		background: #bf0d3e;
+		box-shadow: 0px rem(12px) rem(25px) 0px rgba(191, 13, 61, 0.43);
+	}
+	.type-2:hover {
+		background: #fff;
+		color: #333;
+	}
+}
+
+.btn-style-5 {
+	background: #0e1e40;
+	color: #fff !important;
+	box-shadow: 0px rem(12px) rem(25px) 0px rgba(14, 30, 64, 0.43);
+	@include mt;
+
+	&:hover {
+		background: #bf0d3e;
+		box-shadow: 0px rem(12px) rem(25px) 0px rgba(191, 13, 61, 0.43);
+	}
+}
+
+.btn-style-6 {
+	background: #990f0f;
+	color: #fff !important;
+	box-shadow: 0px rem(8px) rem(15px) 0px rgba(191, 13, 62, 0.43);
+	border: 1px solid;
+	@include mt;
+	
+	&:hover {
+		background: #ac0c38;
+		box-shadow: 0px rem(8px) rem(18px) 0px rgba(172, 12, 56, 0.43);
+	}
+}

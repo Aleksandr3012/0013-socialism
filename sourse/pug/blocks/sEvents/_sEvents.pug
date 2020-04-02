@@ -1,0 +1,72 @@
+mixin sEvents()
+	// start sEvents
+	+b.sEvents#sEvents&attributes(attributes)
+		.container
+			h2.text-center Свежие записи
+			+b.events
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							+e.A.item(href="#")
+								+e.img-wrap
+									img(src="img/@2x/event-1.png" alt="")
+								+e.DIV.body
+									h4 Спасибо всем организаторам встречи в Смоленске.
+									+e.date 25.02.2020 / 
+						.swiper-slide
+							+e.A.item(href="#")
+								+e.img-wrap
+									img(src="img/@2x/event-2.png" alt="")
+								+e.DIV.body
+									h4 Спасибо всем организаторам встречи в Воронеже.
+									+e.date 25.02.2020 / 
+						.swiper-slide
+							+e.A.item(href="#")
+								+e.img-wrap
+									img(src="img/@2x/event-3.png" alt="")
+								+e.DIV.body
+									h4 Спасибо всем организаторам встречи в Тамбове.
+									+e.date 25.02.2020 / 
+						.swiper-slide
+							+e.A.item(href="#")
+								+e.img-wrap
+									img(src="img/@2x/event-4.jpg" alt="")
+								+e.DIV.body
+									h4 Наше движение запускает специальный проект&nbsp;&mdash; общественный телеканал &laquo;За&nbsp;Новый Социализм!&raquo;
+									+e.date 25.02.2020 / 
+					.swiper-button-next
+					.swiper-button-prev
+			.text-center
+				a.btn.btn-style-4(href='#') Все записи
+
+mixin sEventsLg()
+	// start sEvents
+	+b.sEvents#sEvents&attributes(attributes)
+		.container
+			h2.text-center Свежие записи
+			+b.events--sliderLg
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							+e.A.item(href="#")
+								+e.img-wrap
+									img(src="img/@2x/eventLg-1.png" alt="")
+								+e.DIV.body
+									h4 Встреча 7 марта 2020 года в 13.00 г. Калинин
+						.swiper-slide
+							+e.A.item(href="#")
+								+e.img-wrap
+									img(src="img/@2x/eventLg-2.jpg" alt="")
+								+e.DIV.body
+									h4 Встреча 15 марта 2020 года в 12.00 г. Новороссийск
+						.swiper-slide
+							+e.A.item(href="#")
+								+e.img-wrap
+									img(src="img/@2x/eventLg-3.png" alt="")
+								+e.DIV.body
+									h4 Встреча 14 марта 2020 года в 17.00 г. Краснодар
+					.swiper-button-next
+					.swiper-button-prev
+			.text-center
+				a.btn.btn-style-4(href='#') Список мероприятий
+	// end sEvents

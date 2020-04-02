@@ -3,18 +3,28 @@ extends layout/main.pug
 
 include ../blocks/sContent/_sContent.pug
 include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAction/_sAction.pug 
+include ../blocks/sNumberParticipants/_sNumberParticipants.pug 
+include ../blocks/sSocial/_sSocial.pug 
+include ../blocks/sEvents/_sEvents.pug 
+include ../blocks/sCalendar/_sCalendar.pug 
 
 block variables
 	- let  mainPage= null
 block title
-	- let  title= 'title'
+	- let  title= 'Движение «За новый социализм» Платошкина Николая Николаевича в Москве'
 	title= title
 block pagecontent 
 	+mob-mnu()
 	+header()
-		+topLine()
 		+top-nav()
-	+headerBlock()
-	+sForm()
-	+sContact()
+	+sAction()
+	+sNumberParticipants()
+	+sContent()
+	+sContent-2()
+	+sActionSecond()
+	+sSocial()(class="bg-secondary")
+	+sEvents()
+	+sEventsLg()
+	+sCalendar()
 	+footer()

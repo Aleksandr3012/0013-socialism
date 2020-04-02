@@ -1,9 +1,23 @@
 mixin headerBlock()
 	// start headerBlock
-	+b.SECTION.headerBlock.section#headerBlock&attributes(attributes)
+	+b.headerBlock#headerBlock&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 headerBlock
-				
-			.row
+			+e.row.row
+				+e.col.col-auto
+					+e.leader
+						span Лидер движения &laquo;За&nbsp;новый социализм&raquo;
+						h1 Платошкин <br>Николай Николаевич
+				.col-auto.align-self-center
+					+e.social
+						ul
+							li: a(href="#")
+								+icon('youtube')
+							li: a(href="#")
+								+icon('facebook-f')
+							li: a(href="#")
+								+icon('vk')
+							li: a(href="#")
+								+icon('instagram')
+							li: a(href="#")
+								+icon('odnoklassniki')
 	// end headerBlock

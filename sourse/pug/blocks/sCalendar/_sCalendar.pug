@@ -1,0 +1,48 @@
+mixin sCalendar()
+	// start sCalendar
+	+b.sCalendar#sCalendar&attributes(attributes)
+		.container
+			.row
+				.col-lg-6
+					+e.calendarWrapp--sapphire
+						h4 Календарь мероприятий
+						+e.calendarItem
+							+e.date
+								+e.day 15
+								+e.month МАРТА, 2020Г.
+							+e.info
+								a.h6(href="#") Встреча 15 марта 2020 года в 12.00 г. Новороссийск
+								+e.event 
+									+icon('marker')
+									| г. Новороссийск, Конференц-зал в&nbsp;отеле &laquo;Hilton Garden Inn&raquo;, наб. Адмирала Серебрякова, 29Г
+						+e.calendarItem
+							+e.date
+								+e.day 14
+								+e.month МАРТА, 2020Г.
+							+e.info
+								a.h6(href="#") Встреча 14 марта 2020 года в 17.00 г. Краснодар
+								+e.event 
+									+icon('marker')
+									| г. Краснодар, Конференц-зал White Hall &laquo;Гранд Отель Уют&raquo;, ул. Воровского, 118
+						+e.calendarItem
+							+e.date
+								+e.day 07
+								+e.month МАРТА, 2020Г.
+							+e.info
+								a.h6(href="#") Встреча 7 марта 2020 года в 13.00 г. Калинин
+								+e.event 
+									+icon('marker')
+									| г. Калинин, Бизнес-центр &laquo;Тверь&raquo;, пер. Смоленский, 29
+				.col-lg-6
+					+e.calendarWrapp--blue
+						p Уважаемые единомышленники и сторонники! <br> Если Вы&nbsp;желаете присоединиться, помочь Движению или принять участие в&nbsp;мероприятиях проводимых Движением в&nbsp;Москве, просим Вас связаться с&nbsp;кураторами по&nbsp;Вашим федеральным округам
+						+e.A.contact(href='#') Контакты кураторов по федеральным округам
+					+e.calendarWrapp--ultramarine
+						+e.social
+							ul
+								li: a(href="#"): +icon('facebook-f')
+								li: a(href="#"): +icon('vk')
+								li: a(href="#"): +icon('instagram')
+								li: a(href="#"): +icon('youtube')
+								li: a(href="#"): +icon('odnoklassniki')
+	// end sCalendar

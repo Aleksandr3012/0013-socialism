@@ -1,9 +1,8 @@
 mixin header()
 	// start header
-	+b.SECTION.header.section#header&attributes(attributes)
+	+b.header#header&attributes(attributes)
 		.container
-			+b.section-title.text-center
-				h2 header
-				
-			.row
+			+pic('platoshkin_nikolay-3.jpg', 'bg', 'lazy')(class="picture-bg")
+			block
+			+headerBlock()
 	// end header

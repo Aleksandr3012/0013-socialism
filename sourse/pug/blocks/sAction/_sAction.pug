@@ -1,0 +1,40 @@
+mixin sAction()
+	// start sAction
+	+b.sAction#sAction&attributes(attributes)
+		.container
+			+e.colAction
+				+e.A.item.program(href="#")
+					+icon('basic-todo')
+					.h4 Программа
+			+e.colAction
+				+e.A.item.event(href="#")
+					+icon('calendar')
+					.h4 Мероприятия
+			+e.colAction
+				+e.A.item.video(href="#")
+					+icon('megaphone')
+					.h4 Видео
+			+e.colAction
+				+e.A.item.donate(href="#")
+					+icon('basic-case')
+					.h4 Вступить!
+
+mixin sActionSecond()
+	// start sAction
+	+b.sAction--second#sAction&attributes(attributes)
+		.container
+			.row
+				.col-xl-8
+					+e.A.item.donate(href="#")
+						.h3 Присоединиться к Движению «За новый социализм» в Москве!
+						+e.descr Если Вы&nbsp;желаете присоединиться, помочь Движению в&nbsp;Москве или принять участие в&nbsp;мероприятиях проводимых Движением, просим Вас связаться с&nbsp;кураторами по&nbsp;Вашим федеральным округам, указав при этом Ваше ФИО, город проживания и&nbsp;предпочтительный способ связи.
+				.col-xl-2
+					+e.A.item.event(href="#")
+						+icon('megaphone')
+						.h4 Кураторы по федеральным округам
+				.col-xl-2
+					+e.A.item.video(href="#")
+						+icon('megaphone')
+						.h4 Контакты оргкомитета
+
+	// end sAction

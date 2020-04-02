@@ -14,14 +14,20 @@ mixin mob-mnu()
 		+b.toggle-menu-mobile--js
 			span
 		+e.inner
-		
-			+mnu()
+			+menu()
 			.text-right
 	//  мобильное меню
 mixin top-nav() 
 	// start top-nav
 	+b.top-nav.block-with-lazy
 		.container
-			+mnu()
+			.row.justify-content-between.align-items-center
+				.col-auto
+					+e.A.logo(href="#")
+						img(src="img/@2x/logo2.png", alt="")
+				+e.col.col
+					+menu()
+				.col-auto
+					+e.A.btn.btn.btn-style-6.btn-big(href="#") Вступить!
 					
 	// end top-nav

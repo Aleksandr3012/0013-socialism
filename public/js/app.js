@@ -10,6 +10,32 @@ var header = new Vue({
 	created: function created() {},
 	computed: {}
 });
+var headerBlockVue = new Vue({
+	el: '#headerBlock',
+	data: {
+		imgSRc: 'img/'
+	},
+	created: function created() {},
+	computed: {}
+});
+var sActionVue = new Vue({
+	el: '#sAction',
+	data: {
+		imgSRc: 'img/'
+	},
+	methods: {},
+	created: function created() {},
+	computed: {}
+});
+var sCalendarVue = new Vue({
+	el: '#sCalendar',
+	data: {
+		imgSRc: 'img/'
+	},
+	methods: {},
+	created: function created() {},
+	computed: {}
+});
 var sContactVue = new Vue({
 	el: '#sContact',
 	data: {
@@ -26,11 +52,12 @@ var sContentVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
-var headerBlockVue = new Vue({
-	el: '#headerBlock',
+var sEventsVue = new Vue({
+	el: '#sEvents',
 	data: {
 		imgSRc: 'img/'
 	},
+	methods: {},
 	created: function created() {},
 	computed: {}
 });
@@ -39,6 +66,24 @@ var sFormVue = new Vue({
 	data: {
 		imgSRc: 'img/'
 	},
+	created: function created() {},
+	computed: {}
+});
+var sNumberParticipantsVue = new Vue({
+	el: '#sNumberParticipants',
+	data: {
+		imgSRc: 'img/'
+	},
+	methods: {},
+	created: function created() {},
+	computed: {}
+});
+var sSocialVue = new Vue({
+	el: '#sSocial',
+	data: {
+		imgSRc: 'img/'
+	},
+	methods: {},
 	created: function created() {},
 	computed: {}
 });

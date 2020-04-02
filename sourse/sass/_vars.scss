@@ -15,7 +15,7 @@ $gray-200: #e9ecef !default;
 $gray-300: #dee2e6 !default;
 $gray-400: #ced4da !default;
 $gray-500: #adb5bd !default;
-$gray-600: #6c757d !default;
+$gray-600: #e7ecf3 !default;
 $gray-700: #495057 !default;
 $gray-800: #343a40 !default;
 $gray-900: #333 !default;
@@ -24,16 +24,18 @@ $black:    #000 !default;
 $grays: () !default;
 
 
-$blue:    #14468c; !default;
+$blue:    #14468c !default;
 $indigo:  #6610f2 !default;
 $purple:  #6f42c1 !default;
 $pink:    #e83e8c !default;
-$red:     #dc3545 !default;
-$orange:  #fd7e14 !default;
+$red:     #bf0d3e !default;
+$orange:  #ffa100 !default;
 $yellow:  #ffc107 !default;
 $green:   #28a745 !default;
 $teal:    #20c997 !default;
 $cyan:    #17a2b8 !default;
+$ultramarine: #0e1e40 !default;
+$sapphire: #0d2f5d !default;
 
 $colors: () !default;
 // stylelint-disable-next-line scss/dollar-variable-default
@@ -46,7 +48,7 @@ $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
-$light:         $gray-100 !default;
+$light:         #f5f7fa !default;
 $dark:          $gray-800 !default;
 
 $theme-colors: () !default;
@@ -59,7 +61,7 @@ $theme-colors: map-merge(
     // "info":       $info,
     // "warning":    $warning,
     "danger":     $danger,
-    // "light":      $light,
+    "light":      $light,
     // "dark":       $dark
   ),
   $theme-colors
@@ -84,8 +86,8 @@ $grid-breakpoints: (
   sm: 576px,
   md: 768px,
   lg: 992px,
-  xl: 1200px,
-  // xxl: 1400px
+  xl: 1280px,
+  xxl: 1600px
 ) !default; 
 
 // Grid containers
@@ -97,8 +99,8 @@ $container-max-widths: (
   sm: 540px,
   md: 768px,
   lg: 992px,
-  xl: 1200px,
-  xxl: 1580px
+  xl: 1170px,
+  xxl: 1570px
 ) !default; 
 // Grid columns
 //
@@ -126,12 +128,12 @@ $font-weight-base:            $font-weight-normal !default;
 $line-height-base:            1.5 !default;
 
 // title 
-$h1-font-size:                rem(45) !default;
+$h1-font-size:                rem(48) !default;
 $h2-font-size:                rem(30) !default;
-$h3-font-size:                $font-size-base * 1.75 !default;
+$h3-font-size:                rem(25) !default;
 $h4-font-size:                rem(22) !default;
 $h5-font-size:                rem(20) !default;
-$h6-font-size:                $font-size-base !default; 
+$h6-font-size:                rem(18) !default; 
 
 
 $display1-size:               6rem !default;

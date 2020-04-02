@@ -181,12 +181,7 @@ function eventHandler() {
 		return false;
 	});
 
-	$('.s-gal__slider\
-	,.slider-for2 ')
-		.on('lazyLoaded', function (event, slick, image, imageSource) {
-			image.parent().css('background-image', 'url(' + image.attr('src') + ')');
-		});
-	slider
+	// slider
 	const swiper4 = new Swiper('.color-slider', {
 		// slidesPerView: 5,
 		slidesPerView: 'auto',
@@ -217,6 +212,24 @@ function eventHandler() {
 		$("body").prepend(`<p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p>`)
 
 	}
+
+
+	const event = new Swiper('.events .swiper-container', {
+		spaceBetween: 30,
+		loop: true,
+		slidesPerView: 2,
+		navigation: {
+			nextEl: '.swiper-button-next',
+			prevEl: '.swiper-button-prev',
+		},
+		lazy: {
+			loadPrevNext: true,
+		},
+	});
+
+	// $('.main-wrapper').click(function(){
+	// 	$(this).addClass('d-none');
+	// });
 };
 if (document.readyState !== 'loading') {
 	eventHandler();

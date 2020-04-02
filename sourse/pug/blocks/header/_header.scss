@@ -1,7 +1,26 @@
 
 	// start .header
 	.header {
-		 
+		position: relative;
+		min-height: rem(470px);
+		@include media-breakpoint-up(sm){
+			min-height: rem(900px);
+		}
+		// img {
+		// 	@include a-cent;
+		// 	z-index: -1;
+		// }
+		color: #fff;
+
+		&__col {
+			display: flex;
+			align-items: center;
+		}
+
+		&__btn {
+			max-height: rem(52);
+			margin-left: rem(10);
+		}
 	@include media-breakpoint-up(xl) {}
 	@include media-breakpoint-up(lg) {}
 	@include media-breakpoint-up(md) {}
