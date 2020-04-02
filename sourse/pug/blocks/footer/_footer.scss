@@ -8,7 +8,10 @@
 	}
 
 	ul {
-		columns: 2;
+		@include media-breakpoint-up(sm){
+			columns: 2;
+		}
+		margin-bottom: rem(40);
 	}
 
 	a {
@@ -35,13 +38,18 @@
 	&__logo {
 		margin-bottom: rem(60);
 		display: block;
-		text-align: center;
+		@include media-breakpoint-up(sm) {
+			text-align: center;
+		}
 	}
 
 	&__copyright {
-		text-align: center;
+		@include media-breakpoint-up(md){
+			text-align: center;
+		}
 		font-size: $small;
 		color: #b5b5b5;
+		padding-bottom: rem(40);
 	}
 
 	&__btn {
@@ -53,13 +61,16 @@
 		a {
 			color: inherit;
 		}
+
 		@include media-breakpoint-up(md) {
 			text-align: right;
 
-			p {
+		}
+		p {
+			@include media-breakpoint-up(md) {
 				text-align: right;
-				margin-bottom: 0;
 			}
+			margin-bottom: 0;
 		}
 	}
 
@@ -138,4 +149,12 @@
 
 	@include media-breakpoint-down(xs) {
 	}
+}
+
+.voting {
+	position: fixed;
+	right: 0;
+	top: rem(280);
+	border: solid 1px rgb(231, 231, 231);
+	z-index: 11;
 }

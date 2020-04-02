@@ -1,5 +1,8 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
+		+b.A.voting.link-modal(href="#")
+			+e.img-wrap
+				img(src="img/golos.gif", alt="")
 		.container
 			.row
 				.col-lg-4
@@ -14,7 +17,7 @@ mixin footer()
 						li: a(href="#") Видео
 						li: a(href="#") Контакты
 				.col-md-6.col-lg-4
-					+e.A.logo(href="#")
+					+e.A.logo(href="#modal-vote")
 						img(src="img/@2x/logo2.png", alt="logo")
 					+e.copyright Все права на&nbsp;материалы, находящиеся на&nbsp;сайте, охраняются в&nbsp;соответствии с&nbsp;законодательством РФ. При любом использовании материалов сайта письменное согласие обязательно
 				.col-md-6.col-lg-4

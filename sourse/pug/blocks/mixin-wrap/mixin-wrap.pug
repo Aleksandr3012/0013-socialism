@@ -104,7 +104,7 @@ mixin soc()
 //- WP menu
 
 mixin menu()
-	+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")
+	+e.UL.nav(itemscope itemtype="http://schema.org/SiteNavigationElement")&attributes(attributes)
 		+e.LI.item.active( itemprop="item" ): +e.A.link(href="#"  itemprop="url") Главная
 		+e.LI.item.dropdown( itemprop="item" ): +e.A.link(href="#"  itemprop="url") О движении
 			+b.UL.drop
@@ -167,7 +167,7 @@ mixin menu()
 		+e.LI.item( itemprop="item" ): +e.A.link(href="#"  itemprop="url") мероприятия
 		+e.LI.item.dropdown( itemprop="item" ): +e.link(href="#"  itemprop="url") Контакты
 			+b.UL.drop
-				+e.LI.item: +e.A.link(href="#" itemprop="url") кураторы
+				+e.LI.item: +e.A.link(href="#" itemprop="url") Кураторы
 				+e.LI.item: +e.A.link(href="#" itemprop="url") Контакты оргкомитета
 
 

@@ -27,20 +27,20 @@ var sActionVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
+var sContactVue = new Vue({
+	el: '#sContact',
+	data: {
+		imgSRc: 'img/'
+	},
+	created: function created() {},
+	computed: {}
+});
 var sCalendarVue = new Vue({
 	el: '#sCalendar',
 	data: {
 		imgSRc: 'img/'
 	},
 	methods: {},
-	created: function created() {},
-	computed: {}
-});
-var sContactVue = new Vue({
-	el: '#sContact',
-	data: {
-		imgSRc: 'img/'
-	},
 	created: function created() {},
 	computed: {}
 });

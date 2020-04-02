@@ -9,13 +9,21 @@
 	}
 
 	&__leader {
+		@include media-breakpoint-up(sm){
+			padding-left: rem(60);
+		}
 		font-family: 'Cormorant SC', serif;
-		text-align: right;
+		@include media-breakpoint-up(xl) {
+			text-align: right;
+		}
 		span {
 			display: block;
 			max-width: rem(180);
-			margin-left: auto;
+			@include media-breakpoint-up(xl) {
+				margin-left: auto;
+			}
 			font-weight: 400;
+			font-size: $em-base;
 		}
 	}
 
@@ -46,57 +54,76 @@
 	}
 
 	&__row {
-		@include media-breakpoint-up(md) {
-			min-height: rem(600);
+		@include media-breakpoint-up(xs) {
+			min-height: rem(470);
 		}
-		@include media-breakpoint-up(xl){
+		justify-content: space-between;
+		@include media-breakpoint-up(xl) {
 			justify-content: flex-end;
+			min-height: rem(600);
 		}
 	}
 
 	&__col {
-		align-self: flex-end;
-		@include media-breakpoint-up(xl){
+		align-self: center;
+		@include media-breakpoint-up(sm) {
+			align-self: flex-end;
+		}
+		@include media-breakpoint-up(xl) {
 			align-self: center;
 		}
 	}
 
-	@include media-breakpoint-up(xl) {}
+	@include media-breakpoint-up(xl) {
+	}
 
-	@include media-breakpoint-up(lg) {}
+	@include media-breakpoint-up(lg) {
+	}
 
-	@include media-breakpoint-up(md) {}
+	@include media-breakpoint-up(md) {
+	}
 
-	@include media-breakpoint-up(sm) {}
+	@include media-breakpoint-up(sm) {
+	}
 
-	@include media-breakpoint-up(xs) {}
-
-	//
-	@include media-breakpoint-between(md, xl) {}
-
-
-	//
-	@include media-breakpoint-only(xs) {}
-
-	@include media-breakpoint-only(sm) {}
-
-	@include media-breakpoint-only(md) {}
-
-	@include media-breakpoint-only(lg) {}
-
-	@include media-breakpoint-only(xl) {}
+	@include media-breakpoint-up(xs) {
+	}
 
 	//
-	@include media-breakpoint-down(xl) {}
+	@include media-breakpoint-between(md, xl) {
+	}
 
-	@include media-breakpoint-down(lg) {}
+	//
+	@include media-breakpoint-only(xs) {
+	}
 
-	@include media-breakpoint-down(md) {}
+	@include media-breakpoint-only(sm) {
+	}
 
-	@include media-breakpoint-down(sm) {}
+	@include media-breakpoint-only(md) {
+	}
 
-	@include media-breakpoint-down(xs) {}
+	@include media-breakpoint-only(lg) {
+	}
 
+	@include media-breakpoint-only(xl) {
+	}
+
+	//
+	@include media-breakpoint-down(xl) {
+	}
+
+	@include media-breakpoint-down(lg) {
+	}
+
+	@include media-breakpoint-down(md) {
+	}
+
+	@include media-breakpoint-down(sm) {
+	}
+
+	@include media-breakpoint-down(xs) {
+	}
 }
 
 // end.headerBlock

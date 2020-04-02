@@ -1,17 +1,15 @@
 // start .sAction
 .sAction {
-	margin-top: rem(-150);
-	position: relative;
-
-	&--second {
-		margin-top: 0;
-		margin-bottom: rem(-120);
+	margin-top: rem(40);
+	@include media-breakpoint-up(sm){
+		margin-top: rem(-150);
 	}
+	position: relative;
 
 
 	&__item {
 		width: 100%;
-		height: rem(245);
+		min-height: rem(245);
 		padding-left: rem(10);
 		padding-right: rem(10);
 		display: flex;
@@ -55,6 +53,14 @@
 
 	.h4 {
 		text-align: center;
+	}
+
+	&--second {
+		margin-top: 0 !important;
+		margin-bottom: rem(-120);
+		.sAction__item {
+			padding: rem(30) rem(10);
+		}
 	}
 
 	@include media-breakpoint-up(xl) {

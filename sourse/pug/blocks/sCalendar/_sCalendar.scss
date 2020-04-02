@@ -15,11 +15,11 @@
 		}
 
 		// подложки бэкграунда
-		&--sapphire {
+		&--sapphire { // календарь мероприятий
 			&::after {
 				background: $sapphire;
 				@include media-breakpoint-up(lg) {
-					left: rem(-900);
+					left: rem(-500);
 				}
 				z-index: -3;
 			}
@@ -27,18 +27,21 @@
 		&--blue,
 		&--ultramarine {
 			&::after {
-				left: rem(1485);
 				height: rem(500);
-				z-index: -2;
+				z-index: -4;
+				@include media-breakpoint-up(lg){
+					left: rem(1485);
+					z-index: -2;
+				}
 			}
 		}
-		&--blue {
+		&--blue { // Уважаемые единомышленники
 			margin-bottom: rem(50);
 			&::after {
 				background-color: $blue;
 			}
 		}
-		&--ultramarine {
+		&--ultramarine { // Социальные
 			&::after {
 				margin-top: rem(150);
 				z-index: -1;
@@ -50,12 +53,20 @@
 		}
 	}
 
+	ul {
+		display: flex;
+		justify-content: center;
+		@include media-breakpoint-up(lg) {
+			justify-content: flex-start;
+		}
+	}
+
 	li {
 		list-style: none;
-		display: inline-block;
+		display: block;
 		width: rem(50px);
 		height: rem(50px);
-		margin: rem(5) 0;
+		margin: rem(5);
 
 		a {
 			display: flex;
