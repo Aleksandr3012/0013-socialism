@@ -27,6 +27,15 @@ var sActionVue = new Vue({
 	created: function created() {},
 	computed: {}
 });
+var sAsideVue = new Vue({
+	el: '#sAside',
+	data: {
+		imgSRc: 'img/'
+	},
+	methods: {},
+	created: function created() {},
+	computed: {}
+});
 var sCalendarVue = new Vue({
 	el: '#sCalendar',
 	data: {

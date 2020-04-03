@@ -22,10 +22,11 @@ mixin breadcrumb(...items)
 						meta(itemprop="position" content= (i + 1) )
 
 mixin pageHead(...items)
-	+b.pageHead
-		.container
-			block
-			+breadcrumb(...items)
+	+b.pageHead&attributes(attributes)
+		div&attributes(attributes)
+			.container
+				block
+				+breadcrumb(...items)
 		
 //- pugination
 mixin pugin()
@@ -193,7 +194,9 @@ mixin menu()
 //- 			+e.LI.item( itemprop="item" ): +e.A.link(href= linkPatch  itemprop="url")= linkName
 //- /menu
 
-
+mixin mainBlock()
+	+b.mainBlock&attributes(attributes)
+		block
 
 
 mixin pic(i, bg, lazy="lazy", media='576px')

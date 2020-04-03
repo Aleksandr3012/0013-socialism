@@ -36,9 +36,13 @@
 
 .pageHead {
 	position: relative;
+	overflow: hidden;
 	padding: rem(60) 0;
 	h1 {
 		color: #fff;
+		max-width: 1170px;
+		margin-left: auto;
+		margin-right: auto;
 	}
 }
 

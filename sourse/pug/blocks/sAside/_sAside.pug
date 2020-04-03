@@ -1,0 +1,49 @@
+mixin sAsideMenu()
+	// start sAside
+	+b.sAsideMenu#sAside&attributes(attributes)
+		h4 Меню раздела
+		ul
+			li.active
+				a(href="#") Лидер движения
+			li
+				a(href="#") Краткая политическая программа
+			li
+				a(href="#") О российской экономике
+			li
+				a(href="#") Об идеологии в России
+			li
+				a(href="#") Отчет
+			li
+				a(href="#") Агитматериалы
+			li
+				a(href="#") Региональные отделения
+
+
+mixin sAside()
+	// start sAside
+	+b.sAside#sAside&attributes(attributes)
+		+e.leadre.bg-danger
+			h4 Николай Платошкин собирает команду на&nbsp;выборы в&nbsp;Госдуму&nbsp;2021
+			+e.frameWrapp
+				<iframe src="https://www.youtube.com/embed/mSQaH5TziNo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+			+e.A.video(href="#") Все видео
+		+e.action
+			+e.A.item(href="#") 
+				+icon('basic-todo')
+				.h4 Политическая программа
+			+e.A.item(href="#") 
+				+e.imgWrap
+					+icon('calendar')
+					//- img(src="img/svg/calendar-blue.svg", alt="alt")
+					//- img(src="img/svg/calendar.svg", alt="alt")
+				.h4 Календарь мероприятий
+			+e.A.item(href="#") 
+				+icon('megaphone')
+				.h4 Новости и события
+			+e.item.donate
+				h4 Присоединиться к движению «За новый социализм»!
+				+e.A.btn.btn.btn-style-4(href="#") Заполнить анкету
+		a(href="#")
+			img.res-i(src="img/@2x/aside-baner.jpg", alt="#")
+	// end sAside
+

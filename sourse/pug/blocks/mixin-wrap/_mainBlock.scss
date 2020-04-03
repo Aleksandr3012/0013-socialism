@@ -1,0 +1,20 @@
+.mainBlock {
+	img {
+		margin-bottom: rem(20);
+		display: block;
+	}
+
+	p {
+		margin-bottom: rem(20);
+		text-align: justify;
+	}
+
+	i {
+		margin-bottom: rem(20);
+		display: inline-block;
+	}
+
+	li {
+		list-style: none;
+	}
+}
