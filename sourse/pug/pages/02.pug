@@ -1,0 +1,24 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAction/_sAction.pug 
+include ../blocks/sNumberParticipants/_sNumberParticipants.pug 
+include ../blocks/sSocial/_sSocial.pug 
+include ../blocks/sEvents/_sEvents.pug 
+include ../blocks/sCalendar/_sCalendar.pug 
+
+block variables
+	- let  mainPage= null
+block title
+	- let  title= 'О движении «За новый социализм»'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	+pageHead('Главная страница', title)
+		h1= title
+	+sCalendar()
+	+footer()

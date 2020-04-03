@@ -21,7 +21,11 @@ mixin breadcrumb(...items)
 						span( itemprop="name")= items[i]
 						meta(itemprop="position" content= (i + 1) )
 
-
+mixin pageHead(...items)
+	+b.page-head
+		.container
+			block
+			+breadcrumb(...items)
 		
 //- pugination
 mixin pugin()
