@@ -10,7 +10,7 @@ include ../blocks/sEvents/_sEvents.pug
 include ../blocks/sCalendar/_sCalendar.pug 
 
 block variables
-	- let  mainPage= null
+	- let  mainPage= 'mainPage'
 block title
 	- let  title= 'О движении «За новый социализм»'
 	title= title
@@ -19,6 +19,8 @@ block pagecontent
 	+header()
 		+top-nav()
 	+pageHead('Главная страница', title)
+		+pic('flag-2.jpg', 'bg', 'lazy')(class="picture-bg")
 		h1= title
+	+sActionInner()
 	+sCalendar()
 	+footer()

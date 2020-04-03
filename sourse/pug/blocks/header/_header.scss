@@ -46,3 +46,9 @@
 	@include media-breakpoint-down(xs) {} 
 
 } // end.header
+
+.mainPage {
+	.header {
+		min-height: auto;
+	}
+}

@@ -23,7 +23,7 @@
 		<link rel="stylesheet" href="libs/@fancyapps/fancybox/jquery.fancybox.min.css"/>
 		<link rel="stylesheet" href="css/main.min.css"/>
 	</head>
-	<body><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
+	<body class="mainPage"><!--[if lt IE 11]><p   class="browsehappy container">К сожалению, вы используете устаревший браузер. Пожалуйста, <a href="http://browsehappy.com/" target="_blank">обновите ваш браузер</a>, чтобы улучшить производительность, качество отображаемого материала и повысить безопасность.</p><![endif]-->
 		<div class="main-wrapper">
 			<!-- start header-->
 			<div class="header" id="header">
@@ -283,8 +283,14 @@
 				</div>
 			</div>
 			<!-- end header-->
-			<div class="page-head">
+			<div class="pageHead">
 				<div class="container">
+					<!-- picture-->
+					<picture class="lazy picture-bg"> 
+						<source srcset="#" data-srcset="img/@2x/flag-2.jpg" type="image/jpg" media="(min-width:576px)"/>
+						<source srcset="#" data-srcset="img/@1x/flag-2.jpg" type="image/jpg"/><img class="object-fit-js" src="#" data-src="img/@2x/flag-2.jpg" alt=""/>
+					</picture>
+					<!-- /picture-->
 					<h1>О движении «За новый социализм»</h1>
 					<nav aria-label="breadcrumb">
 						<ol class="breadcrumb" itemscope="itemscope" itemtype="http://schema.org/BreadcrumbList">
@@ -296,6 +302,56 @@
 					</nav>
 				</div>
 			</div>
+			<!-- start sAction-->
+			<div class="sAction sAction--inner" id="sAction">
+				<div class="container">
+					<div class="sAction__wrapper">
+						<div class="sAction__colAction"><a class="sAction__item program" href="#">
+							<svg class="icon icon-basic-todo ">
+								<use xlink:href="img/svg/sprite.svg#basic-todo"></use>
+							</svg>
+							<div class="h4">Лидер движения</div></a>
+						</div>
+						<div class="sAction__colAction"><a class="sAction__item program" href="#">
+							<svg class="icon icon-basic-todo ">
+								<use xlink:href="img/svg/sprite.svg#basic-todo"></use>
+							</svg>
+							<div class="h4">Краткая политическая программа</div></a>
+						</div>
+						<div class="sAction__colAction"><a class="sAction__item program" href="#">
+							<svg class="icon icon-basic-todo ">
+								<use xlink:href="img/svg/sprite.svg#basic-todo"></use>
+							</svg>
+							<div class="h4">О российской экономике</div></a>
+						</div>
+						<div class="sAction__colAction"><a class="sAction__item program" href="#">
+							<svg class="icon icon-basic-todo ">
+								<use xlink:href="img/svg/sprite.svg#basic-todo"></use>
+							</svg>
+							<div class="h4">Об идеологии в России</div></a>
+						</div>
+						<div class="sAction__colAction"><a class="sAction__item program" href="#">
+							<svg class="icon icon-basic-todo ">
+								<use xlink:href="img/svg/sprite.svg#basic-todo"></use>
+							</svg>
+							<div class="h4">Отчет</div></a>
+						</div>
+						<div class="sAction__colAction"><a class="sAction__item program" href="#">
+							<svg class="icon icon-basic-todo ">
+								<use xlink:href="img/svg/sprite.svg#basic-todo"></use>
+							</svg>
+							<div class="h4">Агитматериалы</div></a>
+						</div>
+						<div class="sAction__colAction"><a class="sAction__item program" href="#">
+							<svg class="icon icon-basic-todo ">
+								<use xlink:href="img/svg/sprite.svg#basic-todo"></use>
+							</svg>
+							<div class="h4">Региональные отделения</div></a>
+						</div>
+					</div>
+				</div>
+			</div>
+			<!-- end sAction-->
 			<!-- start sCalendar-->
 			<div class="sCalendar" id="sCalendar">
 				<div class="container">

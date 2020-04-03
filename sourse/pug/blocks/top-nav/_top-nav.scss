@@ -10,8 +10,8 @@
 	top: 0;
 	left: 0;
 	width: 100%;
-	@include media-breakpoint-only(lg){
-		@include roww(2)
+	@include media-breakpoint-only(lg) {
+		@include roww(2);
 	}
 
 	&.fixed {
@@ -33,7 +33,7 @@
 	&__item {
 		padding-left: rem(4);
 		padding-right: rem(4);
-		@include media-breakpoint-up(xl){
+		@include media-breakpoint-up(xl) {
 			padding-left: rem(7);
 			padding-right: rem(7);
 		}
@@ -65,7 +65,7 @@
 				background-image: url(../img/svg/chevron-down.svg);
 			}
 			&:hover .drop {
-				transform: translate3d(-5px, 5px, 0);
+				transform: translate3d(-7px, 6px, 0);
 				visibility: visible;
 				opacity: 1;
 			}
@@ -81,7 +81,7 @@
 	}
 
 	&__btn {
-		@include media-breakpoint-down(xs){
+		@include media-breakpoint-down(xs) {
 			display: none;
 		}
 		@include media-breakpoint-down(xl) {
@@ -173,9 +173,10 @@
 
 .drop {
 	@include media-breakpoint-up(lg) {
+		box-shadow: 0px 0px 16px 0px rgba(0, 0, 0, 0.18);
 		visibility: hidden;
 		opacity: 0;
-		transform: translate3d(-11px, 11px, 0);
+		transform: translate3d(-11px, 13px, 0);
 		width: rem(320);
 		padding: rem(15) 0;
 
@@ -196,10 +197,8 @@
 	position: absolute;
 	z-index: 5;
 
-
-
-
-	.top-nav__link, .menu-mobile__link {
+	.top-nav__link,
+	.menu-mobile__link {
 		display: none;
 	}
 
@@ -218,5 +217,12 @@
 				background-color: $blue;
 			}
 		}
+	}
+}
+
+
+.mainPage {
+	.top-nav__item:not(.active) .top-nav__link{
+		color: $body-color;
 	}
 }
