@@ -63,6 +63,7 @@
 				right: rem(-3);
 				z-index: 2;
 				background-image: url(../img/svg/chevron-down.svg);
+				background-repeat: no-repeat;
 			}
 			&:hover .drop {
 				transform: translate3d(-7px, 6px, 0);
@@ -224,5 +225,10 @@
 .mainPage {
 	.top-nav__item:not(.active) .top-nav__link{
 		color: $body-color;
+	}
+	.top-nav__item{ 
+		&.dropdown:before{
+			background-image: url(../img/svg/chevron-down-black.svg);
+		}
 	}
 }
