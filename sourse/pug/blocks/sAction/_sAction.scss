@@ -1,11 +1,10 @@
 // start .sAction
 .sAction {
 	margin-top: rem(40);
-	@include media-breakpoint-up(sm){
+	@include media-breakpoint-up(sm) {
 		margin-top: rem(-150);
 	}
 	position: relative;
-
 
 	&__item {
 		width: 100%;
@@ -30,13 +29,15 @@
 		margin-bottom: rem(30);
 	}
 
+	img {
+		max-width: rem(60);
+		margin-bottom: rem(30);
+	}
+
 	&__colAction {
 		display: inline-block;
 		padding: 0 2px 4px;
-		width: 100%;
-		@include media-breakpoint-up(sm) {
-			width: 49%;
-		}
+		width: 49%;
 		@include media-breakpoint-up(xl) {
 			width: 24.7%;
 		}
@@ -60,6 +61,18 @@
 		margin-bottom: rem(-120);
 		.sAction__item {
 			padding: rem(30) rem(10);
+		}
+	}
+
+	&__col {
+		@include media-breakpoint-between(sm, lg) {
+			&--l {
+				padding-right: 0;
+			}
+
+			&--r {
+				padding-left: 0;
+			}
 		}
 	}
 

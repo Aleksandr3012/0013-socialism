@@ -4,28 +4,46 @@
 
 	.icon {
 		font-size: rem(20);
-		margin-right: rem(10);
+		@include media-breakpoint-up(md) {
+			margin-right: rem(10);
+		}
 	}
 
 	li {
 		list-style: none;
-		flex-shrink: 0;
-		display: block;
+		@include media-breakpoint-up(md){
+			flex-shrink: 0;
+		}
+		display: flex;
+		align-self: center;
+		justify-content: center;
 		padding: 4px 2px 0;
 		a {
 			display: block;
 			color: #fff;
 			font-size: rem(15);
-			padding: rem(25px) rem(40px);
+			padding: rem(24);
+			@include media-breakpoint-up(sm){
+				padding: rem(25);
+			}
+			@include media-breakpoint-up(lg){
+				padding: rem(25px) rem(40px);
+			}
 			border-radius: 3px;
 			text-decoration: none;
+		}
+	}
+
+	span {
+		@include media-breakpoint-down(sm){
+			display: none;
 		}
 	}
 
 	ul {
 		display: flex;
 		justify-content: center;
-		flex-wrap: wrap;
+		// flex-wrap: wrap;
 	}
 
 	&__fb {

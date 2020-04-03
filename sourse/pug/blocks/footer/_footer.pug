@@ -1,10 +1,13 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
 		+b.A.voting.link-modal(href="#")
-			+e.img-wrap
-				img(src="img/golos.gif", alt="")
+			+e.DIV.img-wrap
+				img.res-i(src="img/golos.gif", alt="")
 		.container
 			.row
+				.col.d-md-none.pt-3
+					+e.A.logo(href="#modal-vote")
+						img(src="img/@2x/logo2.png", alt="logo")
 				.col-lg-4
 					+e.transition БЫСТРЫЙ ПЕРЕХОД
 					+e.UL.map
@@ -16,7 +19,7 @@ mixin footer()
 						li: a(href="#") Календарь мероприятий
 						li: a(href="#") Видео
 						li: a(href="#") Контакты
-				.col-md-6.col-lg-4
+				.col-md-6.col-lg-4.d-none.d-md-block
 					+e.A.logo(href="#modal-vote")
 						img(src="img/@2x/logo2.png", alt="logo")
 					+e.copyright Все права на&nbsp;материалы, находящиеся на&nbsp;сайте, охраняются в&nbsp;соответствии с&nbsp;законодательством РФ. При любом использовании материалов сайта письменное согласие обязательно
@@ -30,3 +33,5 @@ mixin footer()
 						p Запись на приём: 
 							a(href="tel:+79263247595") +7 926 324 75 95
 						+e.A.details(href="#") подробнее
+				.col.d-md-none.pt-3
+					+e.copyright Все права на&nbsp;материалы, находящиеся на&nbsp;сайте, охраняются в&nbsp;соответствии с&nbsp;законодательством РФ. При любом использовании материалов сайта письменное согласие обязательно

@@ -8,7 +8,7 @@
 	}
 
 	ul {
-		@include media-breakpoint-up(sm){
+		@include media-breakpoint-up(sm) {
 			columns: 2;
 		}
 		margin-bottom: rem(40);
@@ -44,7 +44,7 @@
 	}
 
 	&__copyright {
-		@include media-breakpoint-up(md){
+		@include media-breakpoint-up(md) {
 			text-align: center;
 		}
 		font-size: $small;
@@ -65,7 +65,6 @@
 
 		@include media-breakpoint-up(md) {
 			text-align: right;
-
 		}
 		p {
 			@include media-breakpoint-up(md) {
@@ -92,7 +91,6 @@
 			width: 0;
 			height: 1px;
 			background-color: $body-color;
-
 		}
 
 		&:hover::before {
@@ -158,4 +156,10 @@
 	top: rem(280);
 	border: solid 1px rgb(231, 231, 231);
 	z-index: 11;
+
+	&__img-wrap {
+		@include media-breakpoint-down(sm) {
+			width: rem(55);
+		}
+	}
 }
