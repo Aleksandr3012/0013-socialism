@@ -4,6 +4,12 @@
 		display: block;
 	}
 
+	a {
+		display: inline-block;
+		color: $body-color;
+		text-decoration: none;
+	}
+
 	strong {
 		font-weight: bold;
 	}
@@ -13,8 +19,12 @@
 		text-align: justify;
 	}
 
-	h6, h3 {
+	h3,
+	h4,
+	h5,
+	h6 {
 		margin-bottom: rem(20);
+		line-height: 1.33em;
 	}
 
 	i {

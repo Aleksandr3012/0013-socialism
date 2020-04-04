@@ -1,0 +1,54 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAction/_sAction.pug 
+include ../blocks/sNumberParticipants/_sNumberParticipants.pug 
+include ../blocks/sSocial/_sSocial.pug 
+include ../blocks/sAside/_sAside.pug 
+include ../blocks/sEvents/_sEvents.pug 
+include ../blocks/sCalendar/_sCalendar.pug 
+
+block variables
+	- let  mainPage= 'mainPage'
+block title
+	- let  title= 'Стать депутатом'
+	title= title
+block pagecontent 
+	+header()
+		+top-nav()
+	+pageHead('Главная страница', title)
+		+pic('flag-2.jpg', 'bg', 'lazy')(class="picture-bg")
+		h1= title
+	.containerLimited
+		.container.contentWrap
+			.row
+				.col-md-8
+					+mainBlock()
+						+e.frameWrap
+							<iframe width="560" height="315" src="https://www.youtube.com/embed/mSQaH5TziNo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+						h3.text-justify Лидер движения "За новый социализм"" Николай Николаевич Платошкин собирает команду на выборы в ГосДуму 2021 года.
+						h4.text-justify Если вы разделяете 5 принципов движения "За новый социализм", то присылайте на почту свою анкету и пройдите публичный отбор в прямом эфире.
+						h3 5 принципов движения "За новый социализм"
+						br
+						p 1. Кандидат должен полностью разделять основную идею «Движения за новый социализм» - это построение в России современного социалистического справедливого общества.
+						p 2. Кандидат должен подчинять внутренней дисциплине движения.
+						p 3. Кандидат должен полностью соответствовать требованиям законодательства РФ предъявляемым к депутатам ГД РФ и госслужащим. Строго без судимостей. А так же не занимавший в прошлом руководящих постов в ЛДПР и Единой России.
+						p 4. Это должен быть активный состоявшийся человек, обладающий необходимым опытом и способным принести пользу общему делу. То есть проявить готовность и ответственность стать известным общественным и политическим деятелем.
+						p 5. И этот человек должен иметь возможность самостоятельно оплатить свои поездки на отборочный этап и проживание.<br> Почта для анкет: <a href="mailto:komandaplatoshkina@gmail.com">komandaplatoshkina@gmail.com</a>
+						h4 НИКОЛАЙ НИКОЛАЕВИЧ ПЛАТОШКИН
+						p  Российский политик, общественный деятель, дипломат, политолог и историк. Доктор исторических наук, заведующий кафедрой международных отношений и дипломатии Московского гуманитарного университета. Автор переводов зарубежных монографий, политический эксперт на телевидении. 
+						h4 Наше дело правое, враг будет разбит, победа будет за нами!
+				.col-md-4
+					//- +sAsideMenu()
+					+sAside()
+
+
+
+
+
+
+	
+	+sCalendar()
+	+footer()
