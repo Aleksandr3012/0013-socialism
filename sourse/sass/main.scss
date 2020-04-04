@@ -80,11 +80,19 @@ $output-bourbon-deprecation-warnings: false;
 }
 
 @import './node_modules/bootstrap/scss/pagination';
+.pagination-wrapper {
+	display: flex;
+	justify-content: center;
+}
 .pagination-wrapper ul {
 	@extend .pagination;
 }
 .pagination-wrapper li .page-numbers {
 	@extend .page-link;
+	margin: 0;
+	border: solid 2px #eff0f1;
+	// padding: 0 rem(8);
+	// line-height: rem(32);
 }
 .pagination-wrapper li {
 	@extend .page-item;
@@ -93,7 +101,27 @@ $output-bourbon-deprecation-warnings: false;
 		color: $pagination-active-color;
 		background-color: $pagination-active-bg;
 		border-color: $pagination-active-border-color;
+		pointer-events: none;
 	}
+}
+.pagination-wrapper {
+	.page-numbers {
+		border-radius: 20px !important;
+	}
+	li {
+		margin: 0 rem(1) rem(15);
+		@include media-breakpoint-up(sm){
+			margin: 0 rem(4) rem(15);
+		}
+		.next, .prev {
+			background-color: #fff !important;
+			&:hover {
+				background-color: #fff;
+
+			}
+		}
+	}
+
 }
 // @import "./node_modules/bootstrap/scss/badge";
 // @import "./node_modules/bootstrap/scss/jumbotron";

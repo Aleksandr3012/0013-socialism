@@ -1,0 +1,97 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAction/_sAction.pug 
+include ../blocks/sNumberParticipants/_sNumberParticipants.pug 
+include ../blocks/sSocial/_sSocial.pug 
+include ../blocks/sAside/_sAside.pug 
+include ../blocks/sEvents/_sEvents.pug 
+include ../blocks/sCalendar/_sCalendar.pug 
+
+block variables
+	- let  mainPage= 'mainPage'
+block title
+	- let  title= 'Стать депутатом'
+	title= title
+block pagecontent 
+	+header()
+		+top-nav()
+	+pageHead('Главная страница', title)
+		+pic('flag-2.jpg', 'bg', 'lazy')(class="picture-bg")
+		h1= title
+	.containerLimited
+		.container.contentWrap
+			.row
+				.col-md-8
+					+mainBlock()
+						+e.newsItem
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/qxx5NZm64KM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							a.h4(href="#") Николай Платошкин: Россия на краю бездны. Прямая трансляция. 03.04.2020
+						+e.newsItem
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/XYdeFtH1mow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							a.h4(href="#") Обращение Николая Платошкина к народу
+						+e.newsItem
+							+e.frameWrap
+								a(href="#")
+									img.lazy(src="#" data-src="img/@2x/event-1.png", alt="#")
+							a.h4(href="#") Спасибо всем организаторам встречи в Смоленске.
+							p Спасибо всем организаторам встречи в Смоленске.
+						+e.newsItem
+							+e.frameWrap
+								a(href="#")
+									img.lazy(src="#" data-src="img/@2x/event-2.png", alt="#")
+							a.h4(href="#") Спасибо всем организаторам встречи в Воронеже.
+							p Спасибо всем организаторам встречи в Воронеже.
+						+e.newsItem
+							+e.frameWrap
+								a(href="#")
+									img.lazy(src="#" data-src="img/@2x/event-3.png", alt="#")
+							a.h4(href="#") Спасибо всем организаторам встречи в Тамбове.
+							p Спасибо всем организаторам встречи в Тамбове.
+						+e.newsItem
+							+e.frameWrap
+								a(href="#")
+									img.lazy(src="#" data-src="img/@2x/event-4.jpg", alt="#")
+							a.h4(href="#") Наше движение запускает специальный проект - общественный телеканал "За Новый Социализм!"
+						+e.newsItem
+							+e.frameWrap
+								a(href="#")
+									img.lazy(src="#" data-src="img/@2x/event-5.png", alt="#")
+							a.h4(href="#") Спасибо всем организаторам встречи в Челябинске.
+							p Спасибо всем организаторам встречи в Челябинске.
+						+e.newsItem
+							+e.frameWrap
+								a(href="#")
+									img.lazy(src="#" data-src="img/@2x/event-6.png", alt="#")
+							a.h4(href="#") Спасибо всем организаторам встречи в Тагиле.
+							p Спасибо всем организаторам встречи в Тагиле.
+						+e.newsItem
+							+e.frameWrap
+								a(href="#")
+									img.lazy(src="#" data-src="img/@2x/event-7.png", alt="#")
+							a.h4(href="#") Спасибо всем организаторам встречи в Свердловске.
+							p Спасибо всем организаторам встречи в Свердловске.
+						+e.newsItem
+							+e.frameWrap
+								a(href="#")
+									img.lazy(src="#" data-src="img/@2x/event-8.png", alt="#")
+							a.h4(href="#") Спасибо всем организаторам встречи в Миассе.
+							p Спасибо всем организаторам встречи в Миассе.
+						+pugin()
+
+				.col-md-4
+					//- +sAsideMenu()
+					+sAside()
+
+
+
+
+
+
+	
+	+sCalendar()
+	+footer()
