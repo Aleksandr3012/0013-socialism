@@ -1,6 +1,5 @@
 "use strict";
 
-// .footer scripts goes here
 var header = new Vue({
 	el: '#header',
 	data: {
@@ -103,4 +102,4 @@ var topLineVue = new Vue({
 	},
 	created: function created() {},
 	computed: {}
-});
+}); // .footer scripts goes here

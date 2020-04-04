@@ -21,6 +21,7 @@ block pagecontent
 	+pageHead('Главная страница', title)
 		+pic('flag-2.jpg', 'bg', 'lazy')(class="picture-bg")
 		h1= title
-	+sActionInner()
+	.containerLimited
+		+sActionInner()
 	+sCalendar()
 	+footer()

@@ -23,13 +23,14 @@ mixin sAside()
 	// start sAside
 	+b.sAside#sAside&attributes(attributes)
 		+e.leadre.bg-danger
-			h4 Николай Платошкин собирает команду на&nbsp;выборы в&nbsp;Госдуму&nbsp;2021
+			h4 Николай Платошкин собирает команду на выборы в&nbsp;Госдуму&nbsp;2021
 			+e.frameWrapp
 				<iframe src="https://www.youtube.com/embed/mSQaH5TziNo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			+e.A.video(href="#") Все видео
 		+e.action
 			+e.A.item(href="#") 
-				+icon('basic-todo')
+				+e.imgWrap
+					+icon('basic-todo')
 				.h4 Политическая программа
 			+e.A.item(href="#") 
 				+e.imgWrap
@@ -38,7 +39,8 @@ mixin sAside()
 					//- img(src="img/svg/calendar.svg", alt="alt")
 				.h4 Календарь мероприятий
 			+e.A.item(href="#") 
-				+icon('megaphone')
+				+e.imgWrap
+					+icon('megaphone')
 				.h4 Новости и события
 			+e.item.donate
 				h4 Присоединиться к движению «За новый социализм»!
