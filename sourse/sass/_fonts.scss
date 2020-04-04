@@ -7,6 +7,7 @@ $file-format: woff2 woff;
 
 @include font-face ($default-font, $addr + "opensans/opensans", 400, $file-formats: $file-format);
 @include font-face ($default-font, $addr + "opensanslight/opensanslight", 300, $file-formats: $file-format);
+@include font-face ($default-font, $addr + "OpenSansBold/OpenSansBold", bold, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "OpenSansSemiBold/OpenSansSemiBold", 600, $file-formats: $file-format);
 // @include font-face ($default-font, $addr + "OpenSansRegularItalic/OpenSansRegularItalic", italic, $file-formats: $file-format);
 

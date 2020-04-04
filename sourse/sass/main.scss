@@ -39,6 +39,8 @@ $output-bourbon-deprecation-warnings: false;
 	max-width: 1170px;
 	margin-left: auto;
 	margin-right: auto;
+	text-transform: uppercase;
+	font-size: $small;
 	a {
 		color: $breadcrumb-active-color;
 	}
