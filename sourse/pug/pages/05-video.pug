@@ -1,0 +1,85 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAction/_sAction.pug 
+include ../blocks/sNumberParticipants/_sNumberParticipants.pug 
+include ../blocks/sSocial/_sSocial.pug 
+include ../blocks/sAside/_sAside.pug 
+include ../blocks/sEvents/_sEvents.pug 
+include ../blocks/sCalendar/_sCalendar.pug 
+
+block variables
+	- let  mainPage= 'mainPage'
+block title
+	- let  title= 'Видео'
+	title= title
+block pagecontent 
+	+header()
+		+top-nav()
+	+pageHead('Главная страница', title)
+		+pic('flag-2.jpg', 'bg', 'lazy')(class="picture-bg")
+		h1= title
+	.containerLimited
+		.container.contentWrap
+			.row
+				.col-md-8
+					+mainBlock()
+						+e.newsItem
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/qxx5NZm64KM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							a.h4(href="#") Николай Платошкин: Россия на краю бездны. Прямая трансляция. 03.04.2020
+						+e.newsItem
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/XYdeFtH1mow" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							a.h4(href="#") Обращение Николая Платошкина к народу
+						+e.newsItem
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/1XLpIutOmBw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+							a.h4(href="#") Мифы о коллективизации и раскулачивании
+
+						+e.newsItem
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/dUPtYqJQ_sw" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+							a.h4(href="#") Николай Платошкин отвечает на вопросы подписчиков. Часть 2
+						+e.newsItem
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/S1Wwkb2vC0M" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+							a.h4(href="#") Николай Платошкин отвечает на вопросы подписчиков. Часть 1
+						+e.newsItem
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/ltXTsnQSY5A" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+							a.h4(href="#") Запускаем новую рубрику: "Почему я присоединился к движению".
+							p ЧЕЛЯБИНСКАЯ ОБЛАСТЬ ЗА НОВЫЙ СОЦИАЛИЗМ
+						+e.newsItem
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/7M3RVTUzlCc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+							a.h4(href="#") ИНФОРМАЦИОННОЕ ЗАРАЖЕНИЕ
+							p КРАСНАЯ ТРУБА!
+						+e.newsItem
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/rfT-wstT-FE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+							a.h4(href="#") В гостях у сказки
+						+e.newsItem
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/h3zVGiDV5rg" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+							a.h4(href="#") Советский червонец - лучшая валюта довоенного мира
+						+e.newsItem
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/1v6ZBdStdqA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
+							a.h4(href="#") Гражданская война в России - мифы и реальность
+						+pugin()
+
+				.col-md-4
+					+sAsideMenuVideo()
+					+sAside()
+
+
+
+
+
+
+	
+	+sCalendar()
+	+footer()

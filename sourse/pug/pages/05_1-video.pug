@@ -1,0 +1,46 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAction/_sAction.pug 
+include ../blocks/sNumberParticipants/_sNumberParticipants.pug 
+include ../blocks/sSocial/_sSocial.pug 
+include ../blocks/sAside/_sAside.pug 
+include ../blocks/sEvents/_sEvents.pug 
+include ../blocks/sCalendar/_sCalendar.pug 
+
+block variables
+	- let  mainPage= 'mainPage'
+block title
+	- let  title= 'Николай Платошкин: Россия на краю бездны. 03 апреля 2020'
+	title= title
+block pagecontent 
+	+header()
+		+top-nav()
+	+pageHead('Главная страница', 'Видео')
+		+pic('flag-2.jpg', 'bg', 'lazy')(class="picture-bg")
+		h1= title
+	.containerLimited
+		.container.contentWrap
+			.row
+				.col-md-8
+					+mainBlock()
+						+e.newsItem
+							span.text-primary 03.04.2020
+							.h4 Николай Платошкин: Россия на краю бездны. 03 апреля 2020
+							+e.frameWrap
+								<iframe width="560" height="315" src="https://www.youtube.com/embed/qxx5NZm64KM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+							a.btn.btn-small.btn-style-3(href="#") Возврат к списку
+				.col-md-4
+					+sAsideMenuVideo()
+					+sAside()
+
+
+
+
+
+
+	
+	+sCalendar()
+	+footer()
