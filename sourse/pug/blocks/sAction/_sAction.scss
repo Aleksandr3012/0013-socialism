@@ -39,6 +39,7 @@
 
 	&__colAction {
 		display: block;
+		position: relative;
 		// display: inline-block;
 		padding: 0 2px 4px;
 		width: 50%;
@@ -52,7 +53,7 @@
 
 	&__wrapper {
 		display: flex;
-		flex-wrap: nowrap;
+		flex-wrap: wrap;
 	}
 
 	&__descr {
@@ -94,10 +95,7 @@
 	&--inner {
 		padding: rem(100) 0;
 		margin-top: 0 !important;
-		.sAction__wrapper {
-			display: flex;
-			flex-wrap: wrap;
-		}
+
 
 		// если нужно будет по три притки 
 		// .sAction__colAction {

@@ -1,18 +1,19 @@
 "use strict";
 
+// .footer scripts goes here
+var headerBlockVue = new Vue({
+	el: '#headerBlock',
+	data: {
+		imgSRc: 'img/'
+	},
+	created: function created() {},
+	computed: {}
+});
 var header = new Vue({
 	el: '#header',
 	data: {
 		imgSRc: 'img/',
 		a: a
-	},
-	created: function created() {},
-	computed: {}
-});
-var headerBlockVue = new Vue({
-	el: '#headerBlock',
-	data: {
-		imgSRc: 'img/'
 	},
 	created: function created() {},
 	computed: {}
@@ -102,4 +103,4 @@ var topLineVue = new Vue({
 	},
 	created: function created() {},
 	computed: {}
-}); // .footer scripts goes here
+});
