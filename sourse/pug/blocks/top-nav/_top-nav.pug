@@ -8,7 +8,7 @@ mixin mob-mnu()
 		//- request.responseType = 'json';
 		//- let dataJson = JSON.parse(json);
 	//- h1= dataJson['lala'] 
-	+b.toggle-menu-mobile--js.d-lg-none
+	+b.toggle-menu-mobile--js.d-lg-none&attributes(attributes)
 		span
 	+b.menu-mobile--js.d-lg-none
 		+b.toggle-menu-mobile--js
@@ -26,9 +26,10 @@ mixin top-nav()
 					+e.A.logo(href="#")
 						img(src="img/@2x/logo2.png", alt="")
 				+e.col.col
-					+mob-mnu()
 					+menu()(class="d-none d-lg-block")
-				.col-auto.d-none.d-sm-block
-					+e.A.btn.btn.btn-style-6.btn-big(href="#") Вступить!
+				.col-auto.d-flex
+					+e.A.btn.btn.btn-style-6.btn-big.d-none.d-sm-block(href="#") Вступить!
+					+mob-mnu()(class="pl-4")
+
 					
 	// end top-nav
