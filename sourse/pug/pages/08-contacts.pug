@@ -1,0 +1,27 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAction/_sAction.pug 
+include ../blocks/sNumberParticipants/_sNumberParticipants.pug 
+include ../blocks/sSocial/_sSocial.pug 
+include ../blocks/sEvents/_sEvents.pug 
+include ../blocks/sCalendar/_sCalendar.pug 
+
+block variables
+	- let  mainPage= 'mainPage'
+block title
+	- let  title= 'Контактная информация'
+	title= title
+block pagecontent 
+	//- +mob-mnu()
+	+header()
+		+top-nav()
+	+pageHead('Главная страница', 'КОНТАКТЫ')
+		+pic('flag-2.jpg', 'bg', 'lazy')(class="picture-bg")
+		h1= title
+	.containerLimited
+		+sActionContacts()
+	+sCalendar()
+	+footer()

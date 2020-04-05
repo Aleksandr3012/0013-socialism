@@ -72,4 +72,20 @@ mixin sActionInner()
 					+e.A.item.program(href="#")
 						+icon('basic-todo')
 						.h4 Региональные отделения
+
+
+mixin sActionContacts()
+	// start sAction
+	+b.sAction--contacts#sAction&attributes(attributes)
+		.container
+			+e.wrapper
+				+e.colAction
+					+e.A.item.program(href="#")
+						+icon('basic-todo')
+						.h4 Кураторы
+				+e.colAction
+					+e.A.item.program(href="#")
+						+icon('basic-todo')
+						.h4 Контакты оргкомитета
+
 	// end sAction

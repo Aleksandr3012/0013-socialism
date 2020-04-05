@@ -1,0 +1,143 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAction/_sAction.pug 
+include ../blocks/sNumberParticipants/_sNumberParticipants.pug 
+include ../blocks/sSocial/_sSocial.pug 
+include ../blocks/sAside/_sAside.pug 
+include ../blocks/sEvents/_sEvents.pug 
+include ../blocks/sCalendar/_sCalendar.pug 
+
+block variables
+	- let  mainPage= 'mainPage'
+block title
+	- let  title= 'Кураторы по федеральным округам'
+	title= title
+block pagecontent 
+	+header()
+		+top-nav()
+	+pageHead('Главная страница','контакты', 'КУРАТОРЫ')
+		+pic('flag-2.jpg', 'bg', 'lazy')(class="picture-bg")
+		h1= title
+
+	.containerLimited
+		.container.contentWrap
+			.row
+				.col-md-8
+					+mainBlock()
+						h2 Движение «За Новый Социализм»
+						h4 Уважаемые единомышленники и сторонники!
+						p Если Вы желаете присоединиться, помочь Движению или принять участие в мероприятиях проводимых Движением, просим Вас связаться с кураторами по Вашим федеральным округам, указав при этом Ваше ФИО, город проживания и предпочтительный способ связи. 
+						br
+						br
+						h2 Заместитель Лидера / руководитель работы с регионами:
+						strong Исмагилов Руслан Габидуллович — <a href="mailto:rukreg@socialism.ru">rukreg@socialism.ru</a>
+						br
+						br
+						br
+						h2 Заместитель Лидера / руководитель финансовой службы:
+						strong Глазкова Анжелика Егоровна — #[a(href="mailto:1-zam@socialism.ru") 1-zam@socialism.ru]
+						br
+						br
+						br
+						h2 Помощник Лидера / Руководитель международного отдела:
+						strong Костерина Ольга Васильевна — #[a.text-danger(href="mailto:rukzarubezh@socialism.ru") rukzarubezh@socialism.ru]
+						br
+						br
+						br
+						h2 Руководитель группы охраны общественного порядка Службы Безопасности:
+						strong Соколов Андрей Валерьевич — #[a.text-danger(href="mailto:goopsb@socialism.ru") goopsb@socialism.ru]
+						br
+						br
+						br
+						h2 Помощник Лидера по общим вопросам:
+						strong Федотов Виктор Иванович — #[a.text-danger(href="mailto:centr.shtab.platoshkina@socialism.ru") centr.shtab.platoshkina@socialism.ru]
+						br
+						br
+						br
+						h2 Куратор по г.  Москве:
+						strong Прах Сергей Анатольевич — #[a(href="mailto:rukmsk@socialism.ru") rukmsk@socialism.ru]
+						br
+						br
+						br
+						h2 Куратор по Московской области:
+						strong Кондратенко Дмитрий Викторович —  #[a(href="mailto:rukmo@socialism.ru") rukmo@socialism.ru]
+						br
+						br
+						strong Денисова Надежда Михайловна
+						br
+						br
+						br
+						h2 Куратор по Центральному Федеральному округу:
+						strong Дружбин Сергей Викторович — #[a.text-danger(href="mailto:rukcfo@socialism.ru") rukcfo@socialism.ru]
+						br
+						br
+						strong Тропин Евгений Николаевич
+						br
+						br
+						br
+						h2 Куратор по Северо-Западному Федеральному округу:
+						strong Филимонов Виталий Юрьевич — #[a.text-danger(href="mailto:rukszfo@socialism.ru") rukszfo@socialism.ru]
+						br
+						br
+						br
+						h2 Куратор по Северо-Кавказскому Федеральному округу:
+						strong Бацазов Тельман Асахметович — #[a.text-danger(href="mailto:rukskfo@socialism.ru") rukskfo@socialism.ru]
+						br
+						br
+						br
+						h2 Куратор по Южному Федеральному округу и республике Крым:
+						strong Тен Дмитрий Сергеевич — #[a.text-danger(href="mailto:rukyfo@socialism.ru") rukyfo@socialism.ru]
+						br
+						br
+						strong Соколов Андрей Валерьевич
+						br
+						br
+						br
+						h2 Куратор по Приволжскому Федеральному округу:
+						strong Зайцев Игорь Иванович — #[a.text-danger(href="mailto:rukpfo@socialism.ru") rukpfo@socialism.ru]
+						br
+						br
+						br
+						h2 Куратор по Уральскому Федеральному округу:
+						strong Галаган Глеб Викторович — #[a.text-danger(href="mailto:rukufo@socialism.ru") rukufo@socialism.ru]
+						br
+						br
+						strong Прилепов Андрей Владимирович
+						br
+						br
+						br
+						h2 Куратор по Сибирскому Федеральному округу:
+						strong Недорезов Андрей Игоревич — #[a.text-danger(href="mailto:ruksfo@socialism.ru") ruksfo@socialism.ru]
+						strong Зорина Елизавета Геннадьевна
+						br
+						br
+						br
+						h2 Куратор по Дальневосточному Федеральному округу:
+						strong Петрушин Дмитрий Анатольевич — #[a.text-danger(href="mailto:rukdfo@socialism.ru") rukdfo@socialism.ru]
+						br
+						br
+						br
+						h2 Координатор по городу Хабаровск: 
+						strong Щеглова Анжелика Александровна — #[a.text-danger(href="mailto:G.habarovsk.dfo@socialism.ru") G.habarovsk.dfo@socialism.ru]
+						br
+						br
+						br
+						h2 Руководитель Молодежного направления Движения:
+						strong Андреев Кирилл Михайлович — #[a.text-danger(href="mailto: rukmolodej@socialism.ru")  rukmolodej@socialism.ru]
+
+
+				.col-md-4
+					+sAsideContacts()
+					+sAside()
+
+
+
+
+
+
+	
+	+sCalendar()
+	+footer()

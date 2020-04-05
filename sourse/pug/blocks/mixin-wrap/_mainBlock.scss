@@ -62,4 +62,135 @@
 	&__newsItem {
 		padding-bottom: rem(40);
 	}
+
+	&__photo {
+		display: flex;
+		flex-wrap: wrap;
+		border-bottom: solid 1px #dbdbdb;
+		padding-bottom: rem(12);
+	}
+
+	&__img-wrap {
+		padding: rem(6);
+		max-width: 100%;
+		border: solid 1px #dbdbdb;
+		margin: 0 rem(8) rem(8) 0;
+		flex: 0 0 100%;
+		@include media-breakpoint-up(md) {
+			flex: 0 0 32.21%;
+			max-width: 32.21%;
+		}
+
+		a {
+			@include block(200, 200);
+			overflow: hidden;
+			img {
+				// width: 100%;
+				// height: auto;
+				width: auto;
+				height: 100%;
+				@include a-cent;
+			}
+		}
+	}
+
+	&__title {
+		padding-bottom: rem(12);
+		font-size: rem(19);
+		font-weight: bold;
+		a {
+			display: inline;
+		}
+	}
+
+	&__date {
+		font-size: rem(18);
+		font-weight: normal;
+		display: block;
+		color: #7f7f7f;
+		a {
+			margin-left: rem(5);
+			display: inline-block;
+		}
+	}
+
+	&__photoItem {
+		margin-bottom: rem(40);
+		@include media-breakpoint-up(md) {
+			padding: 0 rem(30) rem(30) 0;
+		}
+
+		&--inner {
+			.mainBlock__title {
+				font-size: $em-base;
+			}
+
+			.mainBlock__date {
+				font-size: rem(11);
+			}
+
+			.mainBlock__photo{
+				border-color: transparent;
+			}
+
+			.mainBlock__img-wrap {
+				padding: 0;
+				border-color: transparent;
+			}
+		}
+	}
+
+	&__event {
+		margin-bottom: rem(50);
+		img {
+			margin-bottom: 0;
+		}
+
+		a {
+			display: block;
+		}
+	}
+
+	&__month {
+		max-width: rem(90);
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	&__eventBody {
+		display: flex;
+	}
+
+	&__calendar {
+		min-width: rem(120);
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		text-align: center;
+		padding: rem(10) rem(5) rem(45);
+		background-color: #990f0f;
+		color: #fff;
+		margin-right: rem(15);
+		@include media-breakpoint-up(sm){
+			margin-right: rem(30);
+		}
+
+		img {
+			max-width: rem(45);
+			display: block;
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+	&__day {
+		font-weight: bold;
+		font-size: rem(50);
+	}
+
+	&__meeting {
+		padding-top: rem(10);
+	}
+
+
 }

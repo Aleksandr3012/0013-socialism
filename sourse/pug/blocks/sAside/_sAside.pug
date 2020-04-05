@@ -139,3 +139,12 @@ mixin sAsideMenuVideo()
 				a(href="#") Школа Политпросвета
 
 
+mixin sAsideContacts()
+	// start sAside
+	+b.sAsideMenu#sAside&attributes(attributes)
+		h4 Меню раздела
+		ul
+			li.active
+				a(href="#") Кураторы
+			li
+				a(href="#") Контакты оргкомитета

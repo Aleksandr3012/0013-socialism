@@ -1,0 +1,72 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAction/_sAction.pug 
+include ../blocks/sNumberParticipants/_sNumberParticipants.pug 
+include ../blocks/sSocial/_sSocial.pug 
+include ../blocks/sAside/_sAside.pug 
+include ../blocks/sEvents/_sEvents.pug 
+include ../blocks/sCalendar/_sCalendar.pug 
+
+block variables
+	- let  mainPage= 'mainPage'
+block title
+	- let  title= 'Фотогалерея'
+	title= title
+block pagecontent 
+	+header()
+		+top-nav()
+	+pageHead('Главная страница', title)
+		+pic('flag-2.jpg', 'bg', 'lazy')(class="picture-bg")
+		h1= title
+	.containerLimited
+		.container.contentWrap
+			.row
+				.col-md-8
+					+mainBlock()
+						mixin photoItem(t,d,p,n)
+							+e.photoItem
+								+e.title
+									a(href="#")= t
+									+e.date= d
+										a(href="#")= p
+								+e.photo
+									+e.img-wrap
+										a(href=`img/@2x/photo-${n}-1.jpg` data-fancybox=`photo-${n}`)
+											img.lazy(src="#" data-src=`img/@2x/photo-${n}-1.jpg` alt="")
+									+e.img-wrap
+										a(href=`img/@2x/photo-${n}-2.jpg` data-fancybox=`photo-${n}`)
+											img.lazy(src="#" data-src=`img/@2x/photo-${n}-2.jpg` alt="")
+									+e.img-wrap
+										a(href=`img/@2x/photo-${n}-3.jpg` data-fancybox=`photo-${n}`)
+											img.lazy(src="#" data-src=`img/@2x/photo-${n}-3.jpg` alt="")
+						+photoItem('22 марта 2020г. Одиночные пикеты томских активистов общественного движения "За Новый Социализм!"', '22.Мар.2020', '(4 фото)', '1')
+						+photoItem('22 марта 2020г. Пикет новосибирских сторонников общественного движения "За Новый Социализм!" ', '22.Мар.2020', '(4 фото)', '2')
+						+photoItem('22 марта 2020г. Пикет нижегородских сторонников движения "За Новый Социализм!" ', '22.Мар.2020', '(9 фото)', '3')
+						+photoItem('22 марта 2020г. В городе Дальнереченск Приморского края была создана первичная ячейка Движения "За Новый Социализм".', '22.Мар.2020', '(3 фото)', '4')
+						+photoItem('22 марта 2020г. в Ростове-на-Дону состоялся митинг против поправок в Конституцию. ', '22.Мар.2020', '(10 фото)', '5')
+						+photoItem('22 марта 2020г. Воронежцы тоже выразили свой протест, против узурпации власти за счёт поправок в Конституцию.', '22.Мар.2020', '(5 фото)', '6')
+						+photoItem('22 марта 2020г. Участники московской ячейки движения "За новый социализм". ', '22.Мар.2020', '(8 фото)', '7')
+						+photoItem('21 Марат 2020г. В Барнауле одиночный пикет сторонника движения "За Новый Социализм!" у ТЦ "Европа" ', '21.Мар.2020', '(1 фото)', '8')
+						+photoItem('17 марта 2020г. Курск ячейка движения "За Новый Социлиализм!" ', '21.Мар.2020', '(3 фото)', '9')
+						+photoItem('18 марат 2020г. Москва собрание центрального штаба.', '18.Мар.2020', '(6 фото)', '10')
+						+photoItem('18 марта 2020г. Вот уже несколько дней, в Комсомольске-на-Амуре проводятся одиночные пикеты в различных местах города. ', '18.Мар.2020', '(19 фото)', '11')
+						+photoItem('17 марта 2020г. Москва пикет молодежного крыла общественного движения "За Новый Социализм!" ', '17.Мар.2020', '(6 фото)', '12')
+						+photoItem('16 Марат 2020г. Москва молодежное крыло движения "За Новый Социализм!" провело очередную серию пикетов.', '16.Мар.2020', '(8 фото)', '13')
+						+photoItem('15 марта 2020г. Митинг в Челябинске за социальную справедливость. ', '15.Мар.2020', '(8 фото)', '14')
+						+photoItem('15 марта 2020г. Калининград. Одиночный пикет сторонника движения "За Новый Социализм!" ', '15.Мар.2020', '(1 фото)', '15')
+						+pugin()
+				.col-md-4
+					//- +sAsideMenuVideo()
+					+sAside()
+
+
+
+
+
+
+	
+	+sCalendar()
+	+footer()

@@ -1,0 +1,59 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAction/_sAction.pug 
+include ../blocks/sNumberParticipants/_sNumberParticipants.pug 
+include ../blocks/sSocial/_sSocial.pug 
+include ../blocks/sAside/_sAside.pug 
+include ../blocks/sEvents/_sEvents.pug 
+include ../blocks/sCalendar/_sCalendar.pug 
+
+block variables
+	- let  mainPage= 'mainPage'
+block title
+	- let  title= 'Мероприятия'
+	title= title
+block pagecontent 
+	+header()
+		+top-nav()
+	+pageHead('Главная страница', title)
+		+pic('flag-2.jpg', 'bg', 'lazy')(class="picture-bg")
+		h1= title
+	.containerLimited
+		.container.contentWrap
+			.row
+				.col-md-8
+					+mainBlock()
+						mixin event(n,d,m,s,p)
+							+e.event
+								a(href="#")
+									img.res-i.lazy(src="#" data-src=`img/@2x/eventLg-${n}` alt="#")
+								+e.eventBody
+									+e.calendar
+										img(src="img/svg/basic_spread_text.svg", alt="alt")
+										+e.day= d
+										+e.month= m
+									+e.meeting
+										a.h4(href="#")= s
+										p= p
+						+event('2.jpg','15','МАРТА, 2020Г.','Встреча 15 марта 2020 года в 12.00 г. Новороссийск','г. Новороссийск, Конференц-зал в отеле "Hilton Garden Inn", наб. Адмирала Серебрякова, 29Г')
+						+event('3.png','14','МАРТА, 2020Г.','Встреча 14 марта 2020 года в 17.00 г. Краснодар','г. Краснодар, Конференц-зал White Hall "Гранд Отель Уют", ул. Воровского, 118')
+						+event('1.png','07','МАРТА, 2020Г.','Встреча 7 марта 2020 года в 13.00 г. Калинин','г. Калинин, Бизнес-центр "Тверь", пер. Смоленский, 29')
+						+event('4.jpg','01','МАРТА, 2020Г.','Встреча 1 марта 2020 года в 17.00 г. Сталинград / Волгоград','г. Сталинград / Волгоград, Отель Hilton Garden Inn Volgograd, пр. Ленина, 56а')
+						+event('5.jpg','22','ФЕВРАЛЯ, 2020Г','Встреча 22 февраля 2020 года в 13.30 г. Смоленск','г. Смоленск. Гостиница "СМОЛЕНСКОТЕЛЬ", ул. Ленина, дом 2/1')
+						+pugin()
+
+				.col-md-4
+					//- +sAsideMenuVideo()
+					+sAside()
+
+
+
+
+
+
+	
+	+sCalendar()
+	+footer()

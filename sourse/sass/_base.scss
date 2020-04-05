@@ -559,8 +559,10 @@ p {
 
 .containerLimited {
 	max-width: 1170px;
-	padding-left: 15px;
-	padding-right: 15px;
+	@include media-breakpoint-up(sm){
+		padding-left: 15px;
+		padding-right: 15px;
+	}
 	margin-left: auto;
 	margin-right: auto;
 }

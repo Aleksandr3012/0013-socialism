@@ -1,0 +1,45 @@
+extends layout/main.pug
+
+
+include ../blocks/sContent/_sContent.pug
+include ../blocks/sContact/_sContact.pug 
+include ../blocks/sAction/_sAction.pug 
+include ../blocks/sNumberParticipants/_sNumberParticipants.pug 
+include ../blocks/sSocial/_sSocial.pug 
+include ../blocks/sAside/_sAside.pug 
+include ../blocks/sEvents/_sEvents.pug 
+include ../blocks/sCalendar/_sCalendar.pug 
+
+block variables
+	- let  mainPage= 'mainPage'
+block title
+	- let  title= 'Встреча 15 марта 2020 года в 12.00 г. Новороссийск'
+	title= title
+block pagecontent 
+	+header()
+		+top-nav()
+	+pageHead('Главная страница', title)
+		+pic('flag-2.jpg', 'bg', 'lazy')(class="picture-bg")
+		h1= title
+	.containerLimited
+		.container.contentWrap
+			.row
+				.col-md-8
+					+mainBlock()
+						img.res-i.lazy(src="#" data-src=`img/@2x/eventLg-1.png` alt="#")
+						h2 Встреча 15 марта 2020 года в 12.00 г. Новороссийск
+						p Встреча 15 марта 2020 года в 12.00 г. Новороссийск, Конференц-зал в отеле "Hilton Garden Inn", наб. Адмирала Серебрякова, 29Г
+						a.btn.btn-small.btn-style-3(href="#") Возврат к списку
+
+				.col-md-4
+					//- +sAsideMenuVideo()
+					+sAside()
+
+
+
+
+
+
+	
+	+sCalendar()
+	+footer()
