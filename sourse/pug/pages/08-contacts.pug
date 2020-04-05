@@ -21,7 +21,6 @@ block pagecontent
 	+pageHead('Главная страница', 'КОНТАКТЫ')
 		+pic('flag-2.jpg', 'bg', 'lazy')(class="picture-bg")
 		h1= title
-	.containerLimited
-		+sActionContacts()
+	+sActionContacts()
 	+sCalendar()
 	+footer()
