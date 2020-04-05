@@ -1,6 +1,7 @@
 .modal-win {
 	// display: block;
 	width: 100%;
+	max-width: rem(550);
 	position: relative;
 
 	.modal-content {
@@ -125,3 +126,42 @@ a {
 @include media-breakpoint-down(sm) {}
 
 @include media-breakpoint-down(xs) {}
+
+.modal-vote {
+	&__form-wrap {
+		border: solid 1px $body-color;
+		padding: 0.55em;;
+	}
+
+	b {
+		margin-bottom: 0.55em;
+	}
+
+	&__input-wrap {
+		margin-bottom: 0.2em;
+    margin-left: 0.55em;
+	}
+
+	&__btn-wrap {
+		padding-top: 2px;
+	}
+
+	&__btnVote {
+		background-color: #c33;
+		&:hover {
+		background-color: $red;
+		}
+		padding: rem(5);
+		color: #fff !important;
+	}
+
+	&__btnResult {
+		box-shadow: none;
+		background: #fff;
+		padding: rem(0);
+		margin-left: 1em;
+		&:hover {
+			opacity: .7;
+		}
+	}
+}

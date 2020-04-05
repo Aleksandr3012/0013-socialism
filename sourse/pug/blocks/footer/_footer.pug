@@ -1,12 +1,12 @@
 mixin footer()
 	+b.FOOTER.footer.block-with-lazy
-		+b.A.voting.link-modal(href="#")
+		+b.A.voting.link-modal(href="#modal-vote")
 			+e.DIV.img-wrap
 				img.res-i(src="img/golos.gif", alt="")
 		.container
 			.row
 				.col.d-md-none.pt-3
-					+e.A.logo(href="#modal-vote")
+					+e.A.logo(href="#")
 						img(src="img/@2x/logo2.png", alt="logo")
 				.col-lg-4
 					+e.transition БЫСТРЫЙ ПЕРЕХОД
@@ -20,7 +20,7 @@ mixin footer()
 						li: a(href="#") Видео
 						li: a(href="#") Контакты
 				.col-md-6.col-lg-4.d-none.d-md-block
-					+e.A.logo(href="#modal-vote")
+					+e.A.logo(href="#")
 						img(src="img/@2x/logo2.png", alt="logo")
 					+e.copyright Все права на&nbsp;материалы, находящиеся на&nbsp;сайте, охраняются в&nbsp;соответствии с&nbsp;законодательством РФ. При любом использовании материалов сайта письменное согласие обязательно
 				.col-md-6.col-lg-4

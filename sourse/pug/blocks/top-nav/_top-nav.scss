@@ -30,6 +30,14 @@
 		margin-bottom: 0;
 	}
 
+	&__logo {
+		display: block;
+		max-width: rem(100);
+		@include media-breakpoint-up(sm){
+			max-width: rem(130);
+		}
+	}
+
 	&__item {
 		padding-left: rem(4);
 		padding-right: rem(4);
@@ -77,13 +85,18 @@
 		}
 	}
 
-	img {
-		width: rem(130);
-	}
-
 	&__btn {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		padding: rem(10px) rem(20px);
+		@include media-breakpoint-up(sm){
+			padding: rem(13px) rem(30px);
+		}
+
 		@include media-breakpoint-down(xl) {
 			font-size: rem(13);
+
 		}
 	}
 

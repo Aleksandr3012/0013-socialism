@@ -54,6 +54,8 @@
 	&__wrapper {
 		display: flex;
 		flex-wrap: wrap;
+		justify-content: center;
+
 	}
 
 	&__descr {
@@ -107,10 +109,6 @@
 	&--contacts {
 		margin-top: 0 !important;
 		padding: rem(100) 0;
-
-		.sAction__wrapper {
-			justify-content: center;
-		}
 
 		.sAction__colAction {
 			@include media-breakpoint-up(lg) {

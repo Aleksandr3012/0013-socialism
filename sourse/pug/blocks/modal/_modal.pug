@@ -32,15 +32,28 @@ mixin modal()
 	//- 			.h3 Скоро с Вами свяжутся
 	//- 			br 
 	.d-none
-		+form-wrap()(id="modal-call" class="  modal-win modal-form" )
-			.text-center
-				+e.title.h3.ttu Обратный звонок
-				p Заполните заявку и&nbsp;мы&nbsp;с&nbsp;Вами свяжемся в&nbsp;течении 15&nbsp;минут
-			+input("Ваше Имя")(required) 
-			+input("Ваш телефон","tel")(required)
-			//- +input("email","Ваше email")(required)
-			//- +text( "Комментарий")
-			+e.INPUT.btn(type="submit" value="Рассчитать") 
-			+polite()
+		+form-wrap()(id="modal-vote" class="  modal-win modal-form" )
+			+b.modal-vote
+				h2 Голосование
+				+e.form-wrap
+					+e.president
+						b Кого Вы хотите видеть президентом РФ? #[span.text-danger *]
+						+e.input-wrap
+							input(type="radio" name="president" value="Platoshkin") 
+							lable Платошкин Николай Николаевич
+						+e.input-wrap
+							input(type="radio" name="president" value="Putin") 
+							lable Путин Владимир Владимирович
+					+e.edits
+						b Как вы относитесь к поправкам в конституцию РФ?
+						+e.input-wrap
+							input(type="radio" name="edits" value="no") 
+							lable я ПРОТИВ поправок в конституцию РФ
+						+e.input-wrap
+							input(type="radio" name="edits" value="yes") 
+							lable я ЗА поправки в конституцию РФ
+					+e.btn-wrap
+						+e.BUTTON.btnVote.btn(type="button") Голосовать
+						+e.A.btnResult.btn(href="#") Результат
 		// #modal-call
 	// modal

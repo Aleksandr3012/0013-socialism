@@ -24,11 +24,11 @@ mixin top-nav()
 			.row.justify-content-between.align-items-center
 				.col-auto
 					+e.A.logo(href="#")
-						img(src="img/@2x/logo2.png", alt="")
-				+e.col.col
-					+menu()(class="d-none d-lg-block")
+						img.res-i(src="img/@2x/logo2.png", alt="")
+				+e.col.col.d-none.d-lg-block
+					+menu()
 				.col-auto.d-flex
-					+e.A.btn.btn.btn-style-6.btn-big.d-none.d-sm-block(href="#") Вступить!
+					+e.A.btn.btn.btn-style-6.btn-big(href="#") Вступить!
 					+mob-mnu()(class="pl-4")
 
 					
